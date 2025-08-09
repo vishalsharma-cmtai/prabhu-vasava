@@ -317,10 +317,7 @@ const events: EventData[] = [
     photos: [
       { url: assets.government_event8_image1, caption: "" },
       { url: assets.government_event8_image2, caption: "" },
-      { url: assets.government_event8_image3, caption: "" },
-      { url: assets.government_event8_image4, caption: "" },
       { url: assets.government_event8_image5, caption: "" },
-      { url: assets.government_event8_image6, caption: "" },
     ],
   },
   {
