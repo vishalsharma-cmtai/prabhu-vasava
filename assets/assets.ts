@@ -1,134 +1,3 @@
-// import bjp_logo from './bjp-logo-png.png'
-// import about_us_image from './About-us-image.jpg'
-
-// import jan_arogya from './schemeThumbnail/jan-arogya.jpg'
-// import minority from './schemeThumbnail/minority-department.jpg'
-// import msme from './schemeThumbnail/msme-scheme.jpg'
-// import post_saving from './schemeThumbnail/post-saving.png'
-// import smart_city from './schemeThumbnail/smart-city.jpg'
-// import swachh_bharat from './schemeThumbnail/swachh-bharat.jpg'
-
-// import hero_section from './hero-section.png'
-
-// import bhim_app from './governmentApps/bhim_app_logo.png';
-// import umang from './governmentApps/umang.png';
-// import prabhuvasava from './governmentApps/PrabhuVasava.jpg';
-// import namo_app from './governmentApps/namo_app_logo.png';
-// import facebook from './governmentApps/facebook.png';
-// import instagram from './governmentApps/Instagram.png';
-// import twitter from './governmentApps/Twitter.png';
-// import youtube from './governmentApps/Youtube.png';
-// import flag from './governmentApps/flag.jpg';
-// import bgflag from './governmentApps/bgflag.jpg';
-
-// import press01 from './pressNotes/press1.jpg';
-// import press02 from './pressNotes/press2.jpg';
-// import press03 from './pressNotes/press3.jpeg';
-// import press04 from './pressNotes/press4.jpeg';
-// import press05 from './pressNotes/press5.jpeg';
-// import press06 from './pressNotes/press6.jpeg';
-// import press07 from './pressNotes/press7.jpeg';
-// import press08 from './pressNotes/press8.jpg';
-
-// import sports_event1_image1 from './gallery/photos/sportsActivity/event1/img1.jpg'
-// import sports_event2_image1 from './gallery/photos/sportsActivity/event2/img1.jpg'
-
-// import social_event1_image1 from './gallery/photos/socialActivity/event1/img1.jpg'
-// import social_event1_image2 from './gallery/photos/socialActivity/event1/img2.jpg'
-// import social_event1_image3 from './gallery/photos/socialActivity/event1/img3.jpg'
-
-// import social_event2_image1 from './gallery/photos/socialActivity/event2/img1.jpg'
-// import social_event2_image2 from './gallery/photos/socialActivity/event2/img2.jpg'
-// import social_event2_image3 from './gallery/photos/socialActivity/event2/img3.jpg'
-// import social_event2_image4 from './gallery/photos/socialActivity/event2/img4.jpg'
-
-// import social_event3_image1 from './gallery/photos/socialActivity/event3/img1.jpg'
-// import social_event3_image2 from './gallery/photos/socialActivity/event3/img2.jpg'
-// import social_event3_image3 from './gallery/photos/socialActivity/event3/img3.jpg'
-// import social_event3_image4 from './gallery/photos/socialActivity/event3/img1.jpg'
-
-// import social_event4_image1 from './gallery/photos/socialActivity/event4/img1.jpg'
-// import social_event4_image2 from './gallery/photos/socialActivity/event4/img2.jpg'
-// import social_event4_image3 from './gallery/photos/socialActivity/event4/img3.jpg'
-// import social_event4_image4 from './gallery/photos/socialActivity/event4/img4.jpg'
-// import social_event4_image5 from './gallery/photos/socialActivity/event4/img5.jpg'
-
-// import social_event5_image1 from './gallery/photos/socialActivity/event5/img1.jpg'
-// import social_event5_image2 from './gallery/photos/socialActivity/event5/img2.jpg'
-// import social_event5_image3 from './gallery/photos/socialActivity/event5/img3.jpg'
-// import social_event5_image4 from './gallery/photos/socialActivity/event5/img4.jpg'
-// import social_event5_image5 from './gallery/photos/socialActivity/event5/img5.jpg'
-
-// import social_event6_image1 from './gallery/photos/socialActivity/event6/img1.jpg'
-// import social_event6_image2 from './gallery/photos/socialActivity/event6/img2.jpg'
-// import social_event6_image3 from './gallery/photos/socialActivity/event6/img3.jpg'
-// import social_event6_image4 from './gallery/photos/socialActivity/event6/img4.jpg'
-
-// import social_event7_image1 from './gallery/photos/socialActivity/event7/img1.jpg'
-
-// import social_event8_image1 from './gallery/photos/socialActivity/event8/img1.jpg'
-// import social_event8_image2 from './gallery/photos/socialActivity/event8/img2.jpg'
-// import social_event8_image3 from './gallery/photos/socialActivity/event8/img3.jpg'
-// import social_event8_image4 from './gallery/photos/socialActivity/event8/img4.jpg'
-// import social_event8_image5 from './gallery/photos/socialActivity/event8/img5.jpg'
-// import social_event8_image6 from './gallery/photos/socialActivity/event8/img6.jpg'
-
-// import social_event9_image1 from './gallery/photos/socialActivity/event9/img1.jpg'
-// import social_event9_image2 from './gallery/photos/socialActivity/event9/img2.jpg'
-// import social_event9_image3 from './gallery/photos/socialActivity/event9/img3.jpg'
-// import social_event9_image4 from './gallery/photos/socialActivity/event9/img4.jpg'
-// import social_event9_image5 from './gallery/photos/socialActivity/event9/img5.jpg'
-
-// import social_event10_image1 from './gallery/photos/socialActivity/event10/img1.jpg'
-
-// export const assets = {
-//     bjp_logo,
-//     about_us_image,
-//     jan_arogya,
-//     minority,
-//     msme,
-//     post_saving,
-//     smart_city,
-//     swachh_bharat,
-//     hero_section,
-
-//     bhim_app,
-//     namo_app,
-//     umang,
-//     prabhuvasava,
-//     facebook,
-//     youtube,
-//     twitter,
-//     instagram,
-//     flag,
-//     bgflag,
-
-//     press01,
-//     press02,
-//     press03,
-//     press04,
-//     press05,
-//     press06,
-//     press07,
-//     press08,
-
-//     sports_event1_image1,
-//     sports_event2_image1,
-
-//     social_event1_image1,
-//     social_event1_image2,
-//     social_event1_image3,
-//     social_event2_image1,
-//     social_event2_image2,
-//     social_event2_image3,
-//     social_event2_image4,
-//     social_event3_image1,
-//     social_event3_image2,
-//     social_event3_image3,
-//     social_event3_image4,
-
-// }
-
 import bjp_logo from "./bjp-logo-png.png";
 import about_us_image from "./About-us-image.jpg";
 
@@ -298,10 +167,7 @@ import government_event7_image5 from "./gallery/photos/government/event7/img5.jp
 // Event 8
 import government_event8_image1 from "./gallery/photos/government/event8/img1.jpeg";
 import government_event8_image2 from "./gallery/photos/government/event8/img2.jpeg";
-import government_event8_image3 from "./gallery/photos/government/event8/img3.jpeg";
-import government_event8_image4 from "./gallery/photos/government/event8/img4.jpeg";
 import government_event8_image5 from "./gallery/photos/government/event8/img5.jpeg";
-import government_event8_image6 from "./gallery/photos/government/event8/img6.jpeg";
 
 // Event 9
 import government_event9_image1 from "./gallery/photos/government/event9/img1.jpg";
@@ -507,10 +373,7 @@ export const assets = {
 
   government_event8_image1,
   government_event8_image2,
-  government_event8_image3,
-  government_event8_image4,
   government_event8_image5,
-  government_event8_image6,
 
   government_event9_image1,
   government_event9_image2,
