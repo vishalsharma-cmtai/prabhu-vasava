@@ -2,15 +2,18 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "HOME", href: "/" },
@@ -19,16 +22,16 @@ const Navbar = () => {
       name: "GALLERY",
       href: "#",
       subLinks: [
-        { name: "Photo Gallery", href: "/gallery/photo" },
-        { name: "Video Gallery", href: "/gallery/video" },
+        { name: "PHOTO GALLERY", href: "/gallery/photo" },
+        { name: "VIDEO GALLERY", href: "/gallery/video" },
       ],
     },
     {
       name: "INTERVIEW",
       href: "#",
       subLinks: [
-        { name: "Interview Videos", href: "/interview/videos" },
-        { name: "Press Notes", href: "/interview/press-notes" },
+        { name: "INTERVIEW VIDEOS", href: "/interview/videos" },
+        { name: "PRESS NOTES", href: "/interview/press-notes" },
       ],
     },
     { name: "MY GOVERNMENT", href: "/government" },
@@ -41,6 +44,13 @@ const Navbar = () => {
     };
   }, []);
 
+  type NavSubLink = { name: string; href: string };
+  const isLinkActive = (linkHref: string, subLinks?: NavSubLink[]) => {
+    if (linkHref !== "#" && pathname === linkHref) return true;
+    if (subLinks && subLinks.some((sub) => pathname === sub.href)) return true;
+    return false;
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto px-4 lg:px-8 py-3 flex items-center justify-between">
@@ -51,6 +61,7 @@ const Navbar = () => {
           </span>
         </Link>
 
+        {/* Desktop Nav */}
         <ul className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (
             <li
@@ -68,7 +79,13 @@ const Navbar = () => {
             >
               {link.subLinks ? (
                 <>
-                  <button className="flex items-center gap-1 text-sm text-gray-700 font-medium hover:text-orange-600">
+                  <button
+                    className={`flex items-center gap-1 text-sm font-medium ${
+                      isLinkActive(link.href, link.subLinks)
+                        ? "text-orange-600"
+                        : "text-gray-700 hover:text-orange-600"
+                    }`}
+                  >
                     {link.name}
                     <ChevronDown size={16} />
                   </button>
@@ -78,7 +95,11 @@ const Navbar = () => {
                         <li key={sub.name}>
                           <Link
                             href={sub.href}
-                            className="block px-3 py-2 text-sm text-gray-700 hover:bg-orange-100 rounded"
+                            className={`block px-3 py-2 text-sm rounded ${
+                              pathname === sub.href
+                                ? "bg-orange-100 text-orange-600 font-medium"
+                                : "text-gray-700 hover:bg-orange-100"
+                            }`}
                           >
                             {sub.name}
                           </Link>
@@ -90,7 +111,11 @@ const Navbar = () => {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-gray-700 text-sm font-medium hover:text-orange-600"
+                  className={`text-sm font-medium ${
+                    pathname === link.href
+                      ? "text-orange-600"
+                      : "text-gray-700 hover:text-orange-600"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -99,6 +124,7 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Appointment Button */}
         <div className="hidden md:block">
           <Link href="/appointment">
             <button className="bg-orange-500 text-white text-sm px-4 py-2 rounded hover:bg-orange-600 transition-all duration-200 cursor-pointer">
@@ -107,6 +133,7 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(true)}
@@ -117,6 +144,7 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Mobile Nav */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-orange-500 z-40 transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -138,7 +166,11 @@ const Navbar = () => {
                 {link.subLinks ? (
                   <div>
                     <button
-                      className="flex justify-between items-center w-full text-white font-bold"
+                      className={`flex justify-between items-center w-full font-bold ${
+                        isLinkActive(link.href, link.subLinks)
+                          ? "text-green-400"
+                          : "text-white"
+                      }`}
                       onClick={() =>
                         setOpenDropdown(
                           openDropdown === link.name ? null : link.name
@@ -155,7 +187,11 @@ const Navbar = () => {
                             <Link
                               href={sub.href}
                               onClick={() => setIsOpen(false)}
-                              className="block text-white/90 text-sm hover:underline"
+                              className={`block text-sm ${
+                                pathname === sub.href
+                                  ? "text-green-400 font-medium"
+                                  : "text-white/90 hover:underline"
+                              }`}
                             >
                               {sub.name}
                             </Link>
@@ -167,7 +203,11 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={link.href}
-                    className="block text-white font-bold hover:text-black transition-all"
+                    className={`block font-bold transition-all ${
+                      pathname === link.href
+                        ? "text-green-400"
+                        : "text-white hover:text-green-400"
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}

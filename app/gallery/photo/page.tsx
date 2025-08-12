@@ -1,15 +1,14 @@
-import HeroSection from '@/app/components/HeroSection';
-import PhotoGallery from '@/app/components/PhotoGallery';
-import React from 'react';
+import HeroSection from "@/app/components/HeroSection";
+import PhotoGallery from "@/app/components/PhotoGallery";
+import React from "react";
 
 const PhotoGalleryPage = () => {
   return (
     <>
-    <HeroSection title='Photo Gallery' />
-    < PhotoGallery />
+      <HeroSection title="Photo Gallery" subTitle="Home / Photo Gallery" />
+      <PhotoGallery />
     </>
-  )
-    
+  );
 };
 
 export default PhotoGalleryPage;

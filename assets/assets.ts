@@ -9,6 +9,7 @@ import smart_city from "./schemeThumbnail/smart-city.jpg";
 import swachh_bharat from "./schemeThumbnail/swachh-bharat.jpg";
 
 import hero_section from "./hero-section.png";
+import hero_section_home from "./hero-section-home.png";
 
 import bhim_app from "./governmentApps/bhim_app_logo.png";
 import umang from "./governmentApps/umang.png";
@@ -210,6 +211,7 @@ export const assets = {
   bjp_logo,
   about_us_image,
   hero_section,
+  hero_section_home,
 
   // Schemes
   jan_arogya,

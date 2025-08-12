@@ -74,6 +74,7 @@ const SchemeTabs = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
+      {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
         {tabs.map((tab) => (
           <button
@@ -90,6 +91,7 @@ const SchemeTabs = () => {
         ))}
       </div>
 
+      {/* Scheme Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredSchemes.map((scheme) => (
           <a
@@ -97,8 +99,9 @@ const SchemeTabs = () => {
             href={scheme.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col"
           >
+            {/* Image */}
             <div className="relative w-full aspect-[4/3] bg-gray-50">
               <Image
                 src={scheme.thumbnail}
@@ -107,14 +110,17 @@ const SchemeTabs = () => {
                 className="object-contain p-6"
               />
             </div>
-            <div className="p-5">
+
+            {/* Content */}
+            <div className="p-5 flex flex-col flex-1">
               <h3 className="text-lg font-semibold text-orange-600 mb-2">
                 {scheme.title}
               </h3>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-4">
+              <p className="text-sm text-gray-600 mb-4 line-clamp-4 flex-1">
                 {scheme.description}
               </p>
-              <span className="text-sm text-orange-500 font-medium inline-flex items-center gap-1 hover:underline">
+              {/* Fixed Button at Bottom */}
+              <span className="text-sm text-orange-500 font-medium inline-flex items-center gap-1 hover:underline mt-auto">
                 Open Scheme <ArrowUpRight className="w-4 h-4" />
               </span>
             </div>
@@ -130,10 +136,12 @@ export const SchemePreview = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center text-orange-600 mb-10">
+      {/* Title */}
+      <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent text-center mb-8">
         Featured Government Schemes
-      </h2>
+      </h1>
 
+      {/* Preview Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {topThree.map((scheme) => (
           <a
@@ -141,7 +149,7 @@ export const SchemePreview = () => {
             href={scheme.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col"
           >
             <div className="relative w-full aspect-[4/3] bg-gray-50">
               <Image
@@ -151,14 +159,14 @@ export const SchemePreview = () => {
                 className="object-contain p-6"
               />
             </div>
-            <div className="p-5">
+            <div className="p-5 flex flex-col flex-1">
               <h3 className="text-lg font-semibold text-orange-600 mb-2">
                 {scheme.title}
               </h3>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-4">
+              <p className="text-sm text-gray-600 mb-4 line-clamp-4 flex-1">
                 {scheme.description}
               </p>
-              <span className="text-sm text-orange-500 font-medium inline-flex items-center gap-1 hover:underline">
+              <span className="text-sm text-orange-500 font-medium inline-flex items-center gap-1 hover:underline mt-auto">
                 Open Scheme <ArrowUpRight className="w-4 h-4" />
               </span>
             </div>
@@ -166,6 +174,7 @@ export const SchemePreview = () => {
         ))}
       </div>
 
+      {/* View All Button */}
       <div className="text-center mt-8">
         <Link href="/government">
           <button className="px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-all cursor-pointer">
@@ -175,6 +184,6 @@ export const SchemePreview = () => {
       </div>
     </div>
   );
-}
+};
 
 export default SchemeTabs;

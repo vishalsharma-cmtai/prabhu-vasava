@@ -3,87 +3,108 @@
 import Image from "next/image";
 import Link from "next/link";
 import { assets } from "@/assets/assets";
+import { Download } from "lucide-react";
 
-const links = [
+const apps = [
   {
     label: "NARENDRA MODI",
     src: assets.namo_app,
-    link: "https://www.narendramodi.in/",
-  },
-  { label: "APPLICATION", src: assets.prabhuvasava, link: "/apps" },
-  { label: "UMANG", src: assets.umang, link: "https://web.umang.gov.in/" },
-  { label: "BHIM", src: assets.bhim_app, link: "https://www.bhimupi.org.in/" },
-  {
-    label: "FACEBOOK",
-    src: assets.facebook,
-    link: "https://www.facebook.com/narendramodi",
+    link: "https://play.google.com/store/apps/details?id=com.narendramodiapp",
+    description:
+      "Official Mobile App of Prime Minister of India Narendra Modi.",
   },
   {
-    label: "INSTAGRAM",
-    src: assets.instagram,
-    link: "https://www.instagram.com/narendramodi/",
+    label: "APPLICATION",
+    src: assets.prabhuvasava,
+    link: "https://www.prabhuvasava.com.in/",
+    description: "Access various government applications and citizen services.",
   },
   {
-    label: "TWITTER",
-    src: assets.twitter,
-    link: "https://twitter.com/narendramodi",
+    label: "UMANG",
+    src: assets.umang,
+    link: "https://play.google.com/store/apps/details?id=in.gov.umang.negd.g2c&hl=en_IN",
+    description:
+      "Unified app for availing multiple central and state government services.",
   },
   {
-    label: "YOUTUBE",
-    src: assets.youtube,
-    link: "https://www.youtube.com/user/narendramodi",
+    label: "BHIM",
+    src: assets.bhim_app,
+    link: "https://play.google.com/store/apps/details?id=in.org.npci.upiapp&hl=en_IN",
+    description: "Secure UPI-based payment app for fast money transfers.",
   },
 ];
 
-const GovernmentApps = () => {
+export default function GovernmentApps() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-start px-4 pt-24 pb-10 overflow-hidden text-gray-900">
-      {/* Background flag full screen */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src={assets.bgflag}
-          alt="Background Flag"
-          fill
-          className="object-cover opacity-100"
-          priority
-        />
-      </div>
-
-      <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-orange-600">
+    <main className="min-h-screen flex flex-col items-center justify-start px-4 pt-12 pb-10 text-gray-900">
+      <header className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
           Government Apps
         </h1>
+        <p className="mt-3 text-gray-600 max-w-xl mx-auto text-sm">
+          Explore official Indian government applications for services,
+          information, and digital transactions.
+        </p>
       </header>
 
-      {/* Apps in two vertical rows inside max-w-7xl */}
       <section
         aria-label="Government App Links"
-        className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-7xl z-10"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-5xl"
       >
-        {links.map(({ label, src, link }) => (
-          <Link
-            key={label}
-            href={link}
-            target={link.startsWith("http") ? "_blank" : "_self"}
-            rel="noopener noreferrer"
-            className="flex flex-col items-center group"
-          >
-            <Image
-              src={src}
-              alt={label}
-              width={100} // Increased size
-              height={100}
-              className="rounded-full shadow-md hover:scale-110 hover:shadow-orange-300 transition-all duration-300"
-            />
-            <span className="mt-3 text-sm font-semibold text-center text-gray-700 group-hover:text-orange-600">
-              {label}
-            </span>
-          </Link>
-        ))}
+        {apps.map(({ label, src, link, description }) => {
+          const card = (
+            <div
+              className="group relative bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-3xl shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 p-6 flex flex-col items-center text-center border border-orange-200 overflow-hidden"
+              aria-hidden={false}
+            >
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-orange-300 transition-all duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 bg-gradient-to-br from-orange-200/30 to-orange-400/20 blur-3xl transition-opacity duration-500 pointer-events-none" />
+
+              <div className="w-20 h-20 relative mb-4 transition-transform duration-500 group-hover:scale-110 drop-shadow-md">
+                <Image src={src} alt={label} fill className="object-contain" />
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-800 mb-2">{label}</h3>
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                {description}
+              </p>
+
+              <span
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium shadow-md transition-transform duration-300 group-hover:scale-105"
+                aria-hidden
+              >
+                <Download size={18} /> Download
+              </span>
+            </div>
+          );
+
+          if (link.startsWith("http")) {
+            return (
+              <a
+                key={label}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                aria-label={`Open ${label} (external)`}
+              >
+                {card}
+              </a>
+            );
+          } else {
+            return (
+              <Link
+                key={label}
+                href={link}
+                className="block"
+                aria-label={`Open ${label}`}
+              >
+                {card}
+              </Link>
+            );
+          }
+        })}
       </section>
     </main>
   );
-};
-
-export default GovernmentApps;
-
+}

@@ -6,7 +6,10 @@ import HeroSection from "../components/HeroSection";
 const App = () => {
   return (
     <div>
-      <HeroSection title="Government Schemes" />
+      <HeroSection
+        title="Government Schemes"
+        subTitle="Home / Government Schemes"
+      />
       <SchemeTabs />
     </div>
   );

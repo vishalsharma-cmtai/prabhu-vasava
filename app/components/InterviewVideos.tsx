@@ -84,7 +84,6 @@ const InterviewVideos: React.FC = () => {
   return (
     <div className="py-10 px-4">
       <div className="max-w-7xl mx-auto">
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-10">
           {videos.slice(start, end).map((video) => (
             <div
@@ -135,14 +134,13 @@ const InterviewVideos: React.FC = () => {
 
 export default InterviewVideos;
 
-
 export const InterviewVideosPreview: React.FC = () => {
   return (
     <div className="py-10 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-orange-600 mb-10 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent text-center mb-8">
           Interview Videos
-        </h2>
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-6">
           {videos.slice(0, 3).map((video) => (

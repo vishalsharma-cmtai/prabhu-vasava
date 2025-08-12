@@ -5,7 +5,7 @@ import React from "react";
 const VideoGalleryPage = () => {
   return (
     <>
-      <HeroSection title="Video Gallery" />
+      <HeroSection title="Video Gallery" subTitle='Home / Video Gallery' />
       <VideoGallery />
     </>
   );

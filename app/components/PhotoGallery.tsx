@@ -13,6 +13,7 @@ const tabs = [
 ] as const;
 
 import type { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type EventPhoto = {
   url: string | StaticImageData;
@@ -51,7 +52,8 @@ const events: EventData[] = [
   },
   {
     category: "Social Activity",
-    event: "બારડોલી લોકસભાના માંગરોળ તાલુકાના કંટવા ગામના વિધાર્થીને ભારત લાવવાના શક્ય એટલા પ્રયત્નો હાથ ધર્યા",
+    event:
+      "બારડોલી લોકસભાના માંગરોળ તાલુકાના કંટવા ગામના વિધાર્થીને ભારત લાવવાના શક્ય એટલા પ્રયત્નો હાથ ધર્યા",
     preview: assets.social_event1_image3,
     photos: [
       { url: assets.social_event1_image1, caption: "" },
@@ -61,7 +63,8 @@ const events: EventData[] = [
   },
   {
     category: "Social Activity",
-    event: "રાષ્ટ્રીય સ્વયંસેવક સંધની પથ સંચલન યાત્રાનુ સંગઠન સાથે પુષ્પવર્ષા થી સ્વાગત કર્યું.",
+    event:
+      "રાષ્ટ્રીય સ્વયંસેવક સંધની પથ સંચલન યાત્રાનુ સંગઠન સાથે પુષ્પવર્ષા થી સ્વાગત કર્યું.",
     preview: assets.social_event2_image2,
     photos: [
       { url: assets.social_event2_image1, caption: "" },
@@ -72,7 +75,8 @@ const events: EventData[] = [
   },
   {
     category: "Social Activity",
-    event: "માંડવી તાલુકાના છ ગ્રામ પંચાયતને સાંસદ ગ્રાન્ટમાંથી ટેન્કર વિતરણ કરવામાં આવ્યું",
+    event:
+      "માંડવી તાલુકાના છ ગ્રામ પંચાયતને સાંસદ ગ્રાન્ટમાંથી ટેન્કર વિતરણ કરવામાં આવ્યું",
     preview: assets.social_event3_image3,
     photos: [
       { url: assets.social_event3_image1, caption: "" },
@@ -103,12 +107,12 @@ const events: EventData[] = [
       { url: assets.social_event5_image3, caption: "" },
       { url: assets.social_event5_image4, caption: "" },
       { url: assets.social_event5_image5, caption: "" },
-      
     ],
   },
   {
     category: "Social Activity",
-    event: "ગંગા સ્વરૂપા બહેનોને સાડી-રાશન કીટ વિતરણ, મેડિકલ ચેકઅપ અને ચશ્મા વિતરણ કાર્યક્રમમાં",
+    event:
+      "ગંગા સ્વરૂપા બહેનોને સાડી-રાશન કીટ વિતરણ, મેડિકલ ચેકઅપ અને ચશ્મા વિતરણ કાર્યક્રમમાં",
     preview: assets.social_event6_image3,
     photos: [
       { url: assets.social_event6_image1, caption: "" },
@@ -119,12 +123,10 @@ const events: EventData[] = [
   },
   {
     category: "Social Activity",
-    event: ", દેહદાનના પ્રચાર પ્રસાર માટે કાર્યાલય ખાતેથી સક્ષમ રથનું પ્રસ્થાન કરાવ્યું",
+    event:
+      ", દેહદાનના પ્રચાર પ્રસાર માટે કાર્યાલય ખાતેથી સક્ષમ રથનું પ્રસ્થાન કરાવ્યું",
     preview: assets.social_event7_image1,
-    photos: [
-      { url: assets.social_event7_image1, caption: "" },
-      
-    ],
+    photos: [{ url: assets.social_event7_image1, caption: "" }],
   },
   {
     category: "Social Activity",
@@ -155,15 +157,14 @@ const events: EventData[] = [
     category: "Social Activity",
     event: "During Adivasi Vikas GauravYatra",
     preview: assets.social_event10_image1,
-    photos: [
-      { url: assets.social_event10_image1, caption: "" },
-    ],
+    photos: [{ url: assets.social_event10_image1, caption: "" }],
   },
 
   // Political Activity
   {
     category: "Political",
-    event: "પ્રધાનમંત્રી જનજાતિ આદિવાસી ન્યાય મહા અભિયાન(પીએમ-જનમન) અવાસ યોજના સહાય",
+    event:
+      "પ્રધાનમંત્રી જનજાતિ આદિવાસી ન્યાય મહા અભિયાન(પીએમ-જનમન) અવાસ યોજના સહાય",
     preview: assets.political_event1_image1,
     photos: [
       { url: assets.political_event1_image1, caption: "" },
@@ -203,7 +204,8 @@ const events: EventData[] = [
   },
   {
     category: "Political",
-    event: "157- માંડવી વિધાનસભાના મધ્યસ્થ ચૂંટણી કાર્યાલયના ઉદ્ઘાટન પ્રસંગે ઉપસ્થિત",
+    event:
+      "157- માંડવી વિધાનસભાના મધ્યસ્થ ચૂંટણી કાર્યાલયના ઉદ્ઘાટન પ્રસંગે ઉપસ્થિત",
     preview: assets.political_event3_image1,
     photos: [
       { url: assets.political_event3_image1, caption: "" },
@@ -214,7 +216,8 @@ const events: EventData[] = [
   },
   {
     category: "Political",
-    event: "બારડોલી વિધાનસભાની મુલાકાત અર્થે પધારેલ કેન્દ્રીય રાજ્ય મંત્રી શ્રી @KPGBJP",
+    event:
+      "બારડોલી વિધાનસભાની મુલાકાત અર્થે પધારેલ કેન્દ્રીય રાજ્ય મંત્રી શ્રી @KPGBJP",
     preview: assets.political_event4_image1,
     photos: [
       { url: assets.political_event4_image1, caption: "" },
@@ -225,7 +228,8 @@ const events: EventData[] = [
   },
   {
     category: "Political",
-    event: "લોકશાહીના મંદિર સમા સંસદ પરીભવન ખાતે એક અનેરી ઉર્જા અને આત્મવિશ્વાસ સાથે…🏛️",
+    event:
+      "લોકશાહીના મંદિર સમા સંસદ પરીભવન ખાતે એક અનેરી ઉર્જા અને આત્મવિશ્વાસ સાથે…🏛️",
     preview: assets.political_event5_image1,
     photos: [
       { url: assets.political_event5_image1, caption: "" },
@@ -235,7 +239,8 @@ const events: EventData[] = [
 
   {
     category: "Government",
-    event: "लोकसभा की पिटीशन कमिटी के अंतरगत ONGC एवं इंश्योरेंस कंपनियों के साथ अध्ययन दौरे की बैठकमें उपस्थिति",
+    event:
+      "लोकसभा की पिटीशन कमिटी के अंतरगत ONGC एवं इंश्योरेंस कंपनियों के साथ अध्ययन दौरे की बैठकमें उपस्थिति",
     preview: assets.government_event1_image1,
     photos: [
       { url: assets.government_event1_image1, caption: "" },
@@ -246,11 +251,10 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "માંડવી રેફરલ હોસ્પિટલ ખાતે કોરોના ની અગમચેતી ના પગલારુપે મોકડ્રિલ કરવામા આવી.",
+    event:
+      "માંડવી રેફરલ હોસ્પિટલ ખાતે કોરોના ની અગમચેતી ના પગલારુપે મોકડ્રિલ કરવામા આવી.",
     preview: assets.government_event2_image1,
-    photos: [
-      { url: assets.government_event2_image1, caption: "" },
-    ],
+    photos: [{ url: assets.government_event2_image1, caption: "" }],
   },
   {
     category: "Government",
@@ -290,7 +294,8 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "सूरत में कौशल्य, आईटी और उद्यमिता राज्य मंत्री श्री @Rajeev_GoI के साथ मुलाकात की",
+    event:
+      "सूरत में कौशल्य, आईटी और उद्यमिता राज्य मंत्री श्री @Rajeev_GoI के साथ मुलाकात की",
     preview: assets.government_event6_image1,
     photos: [
       { url: assets.government_event6_image1, caption: "" },
@@ -300,7 +305,8 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "ન્યુ ઈન્ડિયા ફોર યંગ ઈન્ડિયા: ટિકેડ ઓફ ઓપોર્ચ્યુનિટીઝ વિષય પર યુવાનો સાથે સંવાદ કાર્યક્રમ યોજાયો",
+    event:
+      "ન્યુ ઈન્ડિયા ફોર યંગ ઈન્ડિયા: ટિકેડ ઓફ ઓપોર્ચ્યુનિટીઝ વિષય પર યુવાનો સાથે સંવાદ કાર્યક્રમ યોજાયો",
     preview: assets.government_event7_image1,
     photos: [
       { url: assets.government_event7_image1, caption: "" },
@@ -322,7 +328,8 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "यह उमंग है, आज़ादी के अमृत महोत्सव का यह उत्साह है, देश की स्वतंत्रता के पर्व का।",
+    event:
+      "यह उमंग है, आज़ादी के अमृत महोत्सव का यह उत्साह है, देश की स्वतंत्रता के पर्व का।",
     preview: assets.government_event9_image1,
     photos: [
       { url: assets.government_event9_image1, caption: "" },
@@ -333,7 +340,8 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "મહુવા તાલુકાના ઉકા તરસાડીયા કેમ્પસ માલિબા ખાતે પ્રભારી મંત્રી શ્રી @KanuDesai180 જીની અધ્યક્ષતામાં",
+    event:
+      "મહુવા તાલુકાના ઉકા તરસાડીયા કેમ્પસ માલિબા ખાતે પ્રભારી મંત્રી શ્રી @KanuDesai180 જીની અધ્યક્ષતામાં",
     preview: assets.government_event10_image1,
     photos: [
       { url: assets.government_event10_image1, caption: "" },
@@ -347,7 +355,8 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "સુરત જિલ્લાના માંડવી ખાતે વિશ્વ આદિવાસી દિવસ નિમિત્તે ભવ્ય કાર્યક્રમનું આયોજન કરવામાં આવ્યું, જેમાં",
+    event:
+      "સુરત જિલ્લાના માંડવી ખાતે વિશ્વ આદિવાસી દિવસ નિમિત્તે ભવ્ય કાર્યક્રમનું આયોજન કરવામાં આવ્યું, જેમાં",
     preview: assets.government_event11_image1,
     photos: [
       { url: assets.government_event11_image1, caption: "" },
@@ -357,15 +366,15 @@ const events: EventData[] = [
   },
   {
     category: "Government",
-    event: "आदरणीय उप राष्ट्रपति एवं राज्यसभा सदन के सभापति श्री @MVenkaiahNaidu जी के विदाई समारोह",
+    event:
+      "आदरणीय उप राष्ट्रपति एवं राज्यसभा सदन के सभापति श्री @MVenkaiahNaidu जी के विदाई समारोह",
     preview: assets.government_event12_image1,
-    photos: [
-      { url: assets.government_event12_image1, caption: "" },
-    ],
+    photos: [{ url: assets.government_event12_image1, caption: "" }],
   },
   {
     category: "Government",
-    event: "विजयी विश्व तिरंगा प्यारा, झंडा ऊंचा रहे हमारा। #TirangaUtsav#HarGharTiranga",
+    event:
+      "विजयी विश्व तिरंगा प्यारा, झंडा ऊंचा रहे हमारा। #TirangaUtsav#HarGharTiranga",
     preview: assets.government_event13_image1,
     photos: [
       { url: assets.government_event13_image1, caption: "" },
@@ -378,9 +387,7 @@ const events: EventData[] = [
     category: "Government",
     event: "हर घर लहराएगा तिरंगा, हर घर होगा देशभक्ति से रंगा",
     preview: assets.government_event14_image1,
-    photos: [
-      { url: assets.government_event14_image1, caption: "" },
-    ],
+    photos: [{ url: assets.government_event14_image1, caption: "" }],
   },
   {
     category: "Government",
@@ -403,8 +410,15 @@ const events: EventData[] = [
   },
 ];
 
+const categories = [
+  "Government",
+  "Political",
+  "Social Activity",
+  "Sports Activity",
+];
+
 const PhotoGalleryMain: React.FC = () => {
-const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
   const [selectedEvent, setSelectedEvent] = useState<EventData | null>(null);
 
   const filteredEvents =
@@ -414,7 +428,6 @@ const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
-      {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-3 mb-10">
         {tabs.map((tab) => (
           <button
@@ -431,7 +444,6 @@ const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
         ))}
       </div>
 
-      {/* Event Thumbnails */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {filteredEvents.length === 0 ? (
           <p className="col-span-full text-center text-gray-500">
@@ -441,7 +453,7 @@ const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
           filteredEvents.map((event, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition transform hover:scale-[1.02]"
+              className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition transform hover:scale-[1.02] flex flex-col"
               onClick={() => setSelectedEvent(event)}
             >
               <div className="relative w-full h-64 overflow-hidden">
@@ -455,11 +467,11 @@ const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
                   className="object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-4">
-                <p className="text-sm text-gray-800 font-semibold mb-1">
+              <div className="p-4 flex flex-col flex-grow">
+                <p className="text-sm text-gray-800 font-semibold mb-2">
                   {event.photos[0]?.caption?.trim() || event.event}
                 </p>
-                <span className="text-orange-600 text-sm font-medium">
+                <span className="text-orange-600 text-sm font-medium mt-auto">
                   View All →
                 </span>
               </div>
@@ -515,5 +527,69 @@ const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Show all");
     </div>
   );
 };
+
+export function HomeGalleryTabs() {
+  const [activeTab, setActiveTab] = useState(categories[0]);
+
+  const filteredEvents = events
+    .filter((e) => e.category === activeTab)
+    .slice(0, 3);
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 py-10">
+      <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent text-center mb-8">
+        Photo Gallery
+      </h1>
+
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveTab(cat)}
+            className={`px-5 py-2 rounded-full font-medium transition-all ${
+              activeTab === cat
+                ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md"
+                : "bg-gray-100 text-gray-600 hover:bg-gray-200 cursor-pointer"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {filteredEvents.map((event, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 flex flex-col"
+          >
+            <div className="relative w-full h-56">
+              <Image
+                src={event.preview}
+                alt={event.event}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-4 flex flex-col flex-grow">
+              <p className="text-lg font-semibold text-gray-800 mb-1">
+                {event.event}
+              </p>
+              <p className="text-sm text-gray-500 mt-auto">{event.category}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 text-center">
+        <Link href={"/gallery/photo"}>
+          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+            View More →
+          </button>
+        </Link>
+      </div>
+    </section>
+  );
+}
 
 export default PhotoGalleryMain;

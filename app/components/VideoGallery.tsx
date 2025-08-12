@@ -25,14 +25,15 @@ const videos: Video[] = [
     id: "1",
     title: "Video 1",
     url: "https://youtu.be/B2_ANDy0-uU",
-    caption: "Gujarat: BJP's Bardoli candidate Prabhu Vasava wins by more than 7,42,000 votes"
-,
+    caption:
+      "Gujarat: BJP's Bardoli candidate Prabhu Vasava wins by more than 7,42,000 votes",
   },
   {
     id: "2",
     title: "Video 2",
     url: "https://youtu.be/_fyRL59qZWU",
-    caption: "See what BJP's Bardoli candidate Prabhu Vasava has to say ahead of Lok Sabha",
+    caption:
+      "See what BJP's Bardoli candidate Prabhu Vasava has to say ahead of Lok Sabha",
   },
   {
     id: "3",
@@ -45,7 +46,8 @@ const videos: Video[] = [
     id: "4",
     title: "Video 4",
     url: "https://youtu.be/6hMp-j5me18",
-    caption: "Parbhubhai Nagarbhai Vasava , (BJP) takes oath as Member of Parliament (Bardoli (ST), Gujarat)",
+    caption:
+      "Parbhubhai Nagarbhai Vasava , (BJP) takes oath as Member of Parliament (Bardoli (ST), Gujarat)",
   },
   {
     id: "5",
@@ -83,7 +85,6 @@ const VideoGallery: React.FC = () => {
   return (
     <div className="py-10 px-4">
       <div className="max-w-7xl mx-auto">
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-10">
           {videos.slice(start, end).map((video) => (
             <div

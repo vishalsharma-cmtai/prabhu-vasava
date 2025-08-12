@@ -3,26 +3,46 @@
 import { useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import HeroSection from "./HeroSection";
 
 const pressNotes = [
-  { title: "માંડવી તાલુકાના જાખલા ગામેથી સાંસદ પ્રભુભાઈ...", src: assets.press01 },
-  { title: "બારડોલી લોકસભાના માંગરોળ તાલુકાના કંટવા ગામના વિધાર્થીને ભારત લાવવાના શક્ય એટલા પ્રયત્નો હાથ ધર્યા...", src: assets.press02 },
-  { title: "આદરણીય પ્રધાનમંત્રીશ્રી @narendramodi સાહેબના જન્મદિવસના ઉપલક્ષમાં...", src: assets.press03 },
-  { title: "માંડવી હોસ્પિટલ દ્વારા દિવ્યાંગજનો માટે પરીક્ષણ શિબિરનું આયોજન...", src: assets.press04 },
-  { title: "विकलांगता प्रमाणन के उद्देश्य से चिकित्सा शिबिर का आयोजन किया गया।...", src: assets.press05 },
-  { title: "સરકારી હોસ્પિટલ ખાતે દિવ્યાંગો માટે પરીક્ષણ યોજાયો...", src: assets.press06 },
+  {
+    title: "માંડવી તાલુકાના જાખલા ગામેથી સાંસદ પ્રભુભાઈ...",
+    src: assets.press01,
+  },
+  {
+    title:
+      "બારડોલી લોકસભાના માંગરોળ તાલુકાના કંટવા ગામના વિધાર્થીને ભારત લાવવાના શક્ય એટલા પ્રયત્નો હાથ ધર્યા...",
+    src: assets.press02,
+  },
+  {
+    title:
+      "આદરણીય પ્રધાનમંત્રીશ્રી @narendramodi સાહેબના જન્મદિવસના ઉપલક્ષમાં...",
+    src: assets.press03,
+  },
+  {
+    title: "માંડવી હોસ્પિટલ દ્વારા દિવ્યાંગજનો માટે પરીક્ષણ શિબિરનું આયોજન...",
+    src: assets.press04,
+  },
+  {
+    title:
+      "विकलांगता प्रमाणन के उद्देश्य से चिकित्सा शिबिर का आयोजन किया गया।...",
+    src: assets.press05,
+  },
+  {
+    title: "સરકારી હોસ્પિટલ ખાતે દિવ્યાંગો માટે પરીક્ષણ યોજાયો...",
+    src: assets.press06,
+  },
   { title: "Vijay Reli At. Mandvi...", src: assets.press07 },
   { title: "Sandesh News 16 जनवरी 2020...", src: assets.press08 },
 ];
 
 export default function PressNotes() {
-  const [selectedImage, setSelectedImage] = useState<import("next/image").StaticImageData | null>(null);
+  const [selectedImage, setSelectedImage] = useState<
+    import("next/image").StaticImageData | null
+  >(null);
 
   return (
     <>
-      <HeroSection title="Press Notes" />
-
       <section className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {pressNotes.map((note, index) => (

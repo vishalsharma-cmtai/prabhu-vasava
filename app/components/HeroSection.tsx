@@ -4,24 +4,38 @@ import { assets } from "@/assets/assets";
 
 interface HeroSectionProps {
   title: string;
+  subTitle?: string;
+  isHome?: boolean;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ title }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({
+  title,
+  subTitle,
+  isHome = false,
+}) => {
   return (
     <div className="w-full h-64 md:h-[500px] relative">
       <Image
-        src={assets.hero_section}
+        src={isHome ? assets.hero_section_home : assets.hero_section}
         alt="Hero Background"
         fill
         quality={100}
-        className=""
         priority
       />
 
-      <div className="absolute inset-0 bg-opacity-50" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-opacity-40" />
 
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 text-center text-white px-4">
-        <h1 className="text-4xl font-bold text-center">{title}</h1>
+      {/* Centered content */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-10">
+        <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
+          {title}
+        </h1>
+        {subTitle && (
+          <h3 className="text-xl md:text-2xl font-semibold mt-2 drop-shadow-lg">
+            {subTitle}
+          </h3>
+        )}
       </div>
     </div>
   );
