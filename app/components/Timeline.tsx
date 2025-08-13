@@ -106,12 +106,12 @@ const TimelineSection: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
-      <div className="flex flex-wrap justify-center gap-4 mb-12 bg-gradient-to-r from-orange-100 via-orange-200 to-orange-100 rounded-xl p-6 shadow-lg">
+      <div className="flex flex-wrap justify-center gap-4 mb-12 bg-gradient-to-r from-orange-100 via-orange-200 to-orange-100 rounded-2xl p-6 shadow-lg">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-5 py-2 rounded-full text-sm font-semibold border cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+            className={`px-5 py-2 rounded-2xl text-md font-semibold border cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
               activeTab === tab
                 ? "bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-500 shadow-xl scale-105"
                 : "bg-white text-orange-600 border-orange-300 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
@@ -135,8 +135,8 @@ const TimelineSection: React.FC = () => {
               <div className={`w-1/2 px-4 ${isLeft ? "text-right" : ""}`}>
                 {isLeft && (
                   <div className="inline-block max-w-md bg-gradient-to-r from-orange-400 to-red-400 shadow-lg p-4 rounded-lg border border-orange-100 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <h3 className="font-bold text-white">{item.title}</h3>
-                    <p className="text-sm text-white/90 mt-1">
+                    <h3 className="font-bold text-white text-lg">{item.title}</h3>
+                    <p className="text-md text-white/90 mt-1">
                       {item.description}
                     </p>
                   </div>
@@ -151,8 +151,8 @@ const TimelineSection: React.FC = () => {
               <div className={`w-1/2 px-4 ${!isLeft ? "text-left" : ""}`}>
                 {!isLeft && (
                   <div className="inline-block max-w-md bg-gradient-to-r from-orange-400 to-red-400 shadow-lg p-4 rounded-lg border border-orange-100 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <h3 className="font-bold text-white">{item.title}</h3>
-                    <p className="text-sm text-white/90 mt-1">
+                    <h3 className="font-bold text-white text-lg">{item.title}</h3>
+                    <p className="text-md text-white/90 mt-1">
                       {item.description}
                     </p>
                   </div>

@@ -61,8 +61,8 @@ const Footer = () => {
           <ul className="space-y-3 text-md text-white/90">
             <li className="flex items-start gap-2">
               <MapPin size={18} className="mt-1" />
-              Flat No. 201, North Avenue,
-              <br /> New Delhi - 110001
+              AT. MANDVI, Sardar Patel Shopping, Dist. Surat,
+              <br /> GUJARAT - 394160
             </li>
             <li className="flex items-center gap-2">
               <Phone size={18} />
@@ -112,8 +112,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/20 text-center text-sm py-4 px-4 text-white/80">
-        © {new Date().getFullYear()} Prabhu Vasava. All rights reserved.
+      <div className="max-w-7xl mx-auto border-t border-white/20 flex flex-col sm:flex-row justify-between items-center text-sm py-4 px-4 text-white gap-2 sm:gap-10">
+        <span>
+          © {new Date().getFullYear()} Prabhu Vasava. All rights reserved.
+        </span>
+        <span>Content protected. Unauthorized use prohibited.</span>
       </div>
     </footer>
   );

@@ -14,6 +14,7 @@ const tabs = [
 
 import type { StaticImageData } from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type EventPhoto = {
   url: string | StaticImageData;
@@ -433,7 +434,7 @@ const PhotoGalleryMain: React.FC = () => {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-6 py-2 rounded-full text-sm font-semibold border cursor-pointer transition-all duration-300 ${
+            className={`px-6 py-2 rounded-2xl text-sm font-semibold border cursor-pointer transition-all duration-300 ${
               activeTab === tab
                 ? "bg-orange-600 text-white border-orange-600 shadow-lg scale-105"
                 : "bg-white text-orange-600 border-orange-300 hover:bg-orange-500 hover:text-white"
@@ -546,7 +547,7 @@ export function HomeGalleryTabs() {
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`px-5 py-2 rounded-full font-medium transition-all ${
+            className={`px-5 py-2 rounded-2xl font-medium transition-all ${
               activeTab === cat
                 ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200 cursor-pointer"
@@ -583,8 +584,12 @@ export function HomeGalleryTabs() {
 
       <div className="mt-10 text-center">
         <Link href={"/gallery/photo"}>
-          <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
-            View More →
+          <button className="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+            <span className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative flex items-center gap-2">
+              View More
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
           </button>
         </Link>
       </div>

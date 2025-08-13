@@ -20,13 +20,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       }`}
     >
       {isHome ? (
-        <video
-          src="/hero-section.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+        <Image
+          src={assets.hero_section_home}
+          alt="Hero Background"
+          fill
+          quality={100}
+          priority
         />
       ) : (
         <Image
@@ -55,3 +54,4 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 };
 
 export default HeroSection;
+

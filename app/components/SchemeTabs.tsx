@@ -2,7 +2,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const schemes = [
@@ -80,7 +80,7 @@ const SchemeTabs = () => {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-6 py-2 text-sm font-medium rounded-full border cursor-pointer transition-all duration-300 ${
+            className={`px-6 py-2 text-sm font-medium rounded-2xl border cursor-pointer transition-all duration-300 ${
               activeTab === tab
                 ? "bg-orange-500 text-white border-orange-500 shadow-md"
                 : "bg-white text-orange-600 border-orange-300 hover:bg-orange-500 hover:text-white"
@@ -177,8 +177,12 @@ export const SchemePreview = () => {
       {/* View All Button */}
       <div className="text-center mt-8">
         <Link href="/government">
-          <button className="px-6 py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-all cursor-pointer">
-            View All Schemes
+          <button className="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+            <span className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative flex items-center gap-2">
+              View All Schemes
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
           </button>
         </Link>
       </div>

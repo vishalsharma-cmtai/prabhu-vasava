@@ -70,7 +70,7 @@ export default function GovernmentApps() {
               </p>
 
               <span
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium shadow-md transition-transform duration-300 group-hover:scale-105"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold shadow-xl transition-transform duration-300 group-hover:scale-105"
                 aria-hidden
               >
                 <Download size={18} /> Download

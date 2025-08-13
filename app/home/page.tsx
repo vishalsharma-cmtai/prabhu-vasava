@@ -19,6 +19,7 @@ import { SchemePreview } from "../components/SchemeTabs";
 import { InterviewVideosPreview } from "../components/InterviewVideos";
 import { HomeGalleryTabs } from "../components/PhotoGallery";
 import HeroSection from "../components/HeroSection";
+import Testimonials from "../components/Testimonials";
 
 interface Stat {
   icon: LucideIcon;
@@ -261,6 +262,16 @@ const Home: React.FC = () => {
               }`}
             >
               <HomeGalleryTabs />
+            </div>
+
+            <div
+              className={`transform transition-all duration-1000 delay-400 ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
+            >
+              <Testimonials />
             </div>
           </div>
         </div>

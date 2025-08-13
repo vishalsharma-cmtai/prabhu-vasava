@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type Video = {
   id: string;
@@ -108,12 +109,14 @@ const InterviewVideos: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex justify-center items-center gap-4">
+        {totalPages > 1 && (
+
+          <div className="flex justify-center items-center gap-4">
           <button
             onClick={handlePrevious}
             disabled={page === 1}
             className="px-4 py-2 bg-orange-400 hover:bg-orange-500 rounded text-white disabled:opacity-50 disabled:cursor-not-allowed"
-          >
+            >
             Previous
           </button>
           <span className="text-gray-700 font-medium">
@@ -123,10 +126,11 @@ const InterviewVideos: React.FC = () => {
             onClick={handleNext}
             disabled={page === totalPages}
             className="px-4 py-2 bg-orange-400 hover:bg-orange-500 rounded text-white disabled:opacity-50 disabled:cursor-not-allowed"
-          >
+            >
             Next
           </button>
         </div>
+          )}
       </div>
     </div>
   );
@@ -168,8 +172,12 @@ export const InterviewVideosPreview: React.FC = () => {
 
         <div className="flex justify-center">
           <Link href="/interview/videos">
-            <button className="px-6 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 cursor-pointer transition">
-              View More
+            <button className="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+              <span className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="relative flex items-center gap-2">
+                View More
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
             </button>
           </Link>
         </div>

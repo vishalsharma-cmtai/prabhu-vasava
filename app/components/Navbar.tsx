@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 
@@ -62,7 +62,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-6 items-center">
+        <ul className="hidden lg:flex gap-6 items-center">
           {navLinks.map((link) => (
             <li
               key={link.name}
@@ -125,16 +125,20 @@ const Navbar = () => {
         </ul>
 
         {/* Appointment Button */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Link href="/appointment">
-            <button className="bg-orange-500 text-white text-sm px-4 py-2 rounded hover:bg-orange-600 transition-all duration-200 cursor-pointer">
-              Appointment
+            <button className="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+              <span className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="relative flex items-center gap-2">
+                Appointment
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
             </button>
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={() => setIsOpen(true)}
             className="text-gray-700 cursor-pointer"
@@ -148,7 +152,7 @@ const Navbar = () => {
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-orange-500 z-40 transition-transform duration-300 ease-in-out transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden`}
+        } lg:hidden`}
       >
         <div className="flex justify-end p-4">
           <button
@@ -217,8 +221,12 @@ const Navbar = () => {
             ))}
             <li>
               <Link href="/appointment">
-                <button className="bg-white text-orange-500 px-4 py-2 rounded cursor-pointer mt-2">
-                  Appointment
+                <button className="group relative overflow-hidden px-6 py-3 bg-white text-orange-500 font-bold rounded-2xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="relative flex items-center gap-2">
+                    Appointment
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
                 </button>
               </Link>
             </li>
@@ -228,7 +236,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-opacity-30 z-30 md:hidden"
+          className="fixed inset-0 bg-opacity-30 z-30 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
