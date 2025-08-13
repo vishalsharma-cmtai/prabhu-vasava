@@ -89,19 +89,7 @@ export default function Testimonials() {
         >
           {testimonials.map((t, idx) => (
             <div key={idx} className="w-full flex-shrink-0 px-4">
-              <div
-                className="w-full 
-  max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl 
-  mx-auto 
-  bg-white 
-  rounded-2xl 
-  shadow-lg 
-  p-4 sm:p-6 
-  text-center 
-  border border-orange-100 
-  transform hover:scale-105 
-  transition duration-300"
-              >
+              <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl mx-autobg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center border border-orange-100 transform hover:scale-105 transition duration-300">
                 <div className="flex items-center justify-center mb-4">
                   <Image
                     src={t.image}
