@@ -14,7 +14,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   isHome = false,
 }) => {
   return (
-    <div className="w-full h-screen relative overflow-hidden ">
+    <div
+      className={`w-full relative overflow-hidden ${
+        isHome ? "h-screen" : "h-[400px] md:h-[500px]"
+      }`}
+    >
       {isHome ? (
         <video
           src="/hero-section.mp4"
@@ -31,7 +35,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           fill
           quality={100}
           priority
-          className="object-cover"
         />
       )}
 
