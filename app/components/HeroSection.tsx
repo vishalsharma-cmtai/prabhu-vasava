@@ -14,19 +14,29 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   isHome = false,
 }) => {
   return (
-    <div className="w-full h-64 md:h-[500px] relative">
-      <Image
-        src={isHome ? assets.hero_section_home : assets.hero_section}
-        alt="Hero Background"
-        fill
-        quality={100}
-        priority
-      />
+    <div className="w-full h-screen relative overflow-hidden ">
+      {isHome ? (
+        <video
+          src="/hero-section.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        <Image
+          src={assets.hero_section}
+          alt="Hero Background"
+          fill
+          quality={100}
+          priority
+          className="object-cover"
+        />
+      )}
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-opacity-40" />
+      <div className="absolute inset-0 bg-opacity-40 pointer-events-none" />
 
-      {/* Centered content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-10">
         <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
           {title}
