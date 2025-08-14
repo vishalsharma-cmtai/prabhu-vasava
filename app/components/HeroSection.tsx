@@ -20,13 +20,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       }`}
     >
       {isHome ? (
-        <Image
-          src={assets.hero_section_home}
-          alt="Hero Background"
-          fill
-          quality={100}
-          priority
-        />
+        <>
+          <div className="block md:hidden">
+            <Image
+              src={assets.hero_section_phone}
+              alt="Hero Background"
+              fill
+              quality={100}
+              priority
+            />
+          </div>
+          <div className="hidden md:block">
+            <Image
+              src={assets.hero_section_home}
+              alt="Hero Background"
+              fill
+              quality={100}
+              priority
+            />
+          </div>
+        </>
       ) : (
         <Image
           src={assets.hero_section}

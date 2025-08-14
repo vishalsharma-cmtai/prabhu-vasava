@@ -10,6 +10,7 @@ import swachh_bharat from "./schemeThumbnail/swachh-bharat.jpg";
 
 import hero_section from "./hero-section.png";
 import hero_section_home from "./hero-section-home.png";
+import hero_section_phone from "./hero-section-phone.png";
 
 import bhim_app from "./governmentApps/bhim_app_logo.png";
 import umang from "./governmentApps/umang.png";
@@ -216,6 +217,7 @@ export const assets = {
   about_us_image,
   hero_section,
   hero_section_home,
+  hero_section_phone,
 
   random_people1,
   random_people2,
