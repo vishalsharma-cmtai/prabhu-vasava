@@ -83,8 +83,8 @@ const Home: React.FC = () => {
                   <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-orange-600 rounded-2xl opacity-20 group-hover:opacity-30 transition-all duration-500 animate-pulse"></div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-orange-500 to-orange-700 rounded-2xl opacity-30 group-hover:opacity-40 transition-all duration-500 animate-pulse delay-75"></div>
 
-                  {/* portrait card: taller than wide, rounded-2xl, keep ring & hover */}
-                  <div className="relative w-64 h-[22rem] sm:w-72 sm:h-[26rem] md:w-80 md:h-[30rem] lg:w-[28rem] lg:h-[36rem] overflow-hidden shadow-2xl ring-4 ring-orange-200 group-hover:ring-orange-300 transition-all duration-500 group-hover:scale-105 rounded-2xl">
+                  
+                  <div className="relative w-64 h-[22rem] sm:w-72 sm:h-[26rem] md:w-80 md:h-[30rem] lg:w-[28rem] lg:h-[36rem] overflow-hidden shadow-xl ring-4 ring-orange-200 group-hover:ring-orange-300 transition-all duration-500 group-hover:scale-105 rounded-2xl">
                     <Image
                       src={assets.about_us_image}
                       alt="Prabhu N. Vasava - MP Bardoli"
