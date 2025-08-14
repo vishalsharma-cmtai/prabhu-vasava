@@ -16,7 +16,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <div
       className={`w-full relative overflow-hidden ${
-        isHome ? "h-screen" : "h-[400px] md:h-[500px]"
+        isHome ? "h-[calc(100vh-72px)]" : "h-[400px] md:h-[500px]"
       }`}
     >
       {isHome ? (

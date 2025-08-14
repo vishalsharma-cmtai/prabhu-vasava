@@ -22,6 +22,10 @@ import youtube from "./governmentApps/Youtube.png";
 import flag from "./governmentApps/flag.jpg";
 import bgflag from "./governmentApps/bgflag.jpg";
 
+import random_people1 from "./random-people1.jpg"
+import random_people2 from "./random-people2.jpg"
+import random_people3 from "./random-people3.jpg"
+
 import press01 from "./pressNotes/press1.jpg";
 import press02 from "./pressNotes/press2.jpg";
 import press03 from "./pressNotes/press3.jpeg";
@@ -212,6 +216,10 @@ export const assets = {
   about_us_image,
   hero_section,
   hero_section_home,
+
+  random_people1,
+  random_people2,
+  random_people3,
 
   // Schemes
   jan_arogya,

@@ -7,28 +7,28 @@ import { assets } from "@/assets/assets";
 
 const testimonials = [
   {
-    name: "Leo",
-    role: "Lead Designer",
-    image: assets.about_us_image,
-    rating: 4,
-    title: "It was a very good experience",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis.",
-  },
-  {
-    name: "Sophia",
-    role: "Project Manager",
-    image: assets.about_us_image,
+    name: "राहुल शर्मा",
+    role: "किसान",
+    image: assets.random_people3,
     rating: 5,
-    title: "Highly recommend!",
-    text: "Suspendisse sed magna eget nibh in turpis. Consequat dui diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu.",
+    title: "बहुत ही अच्छा अनुभव रहा",
+    text: "मैंने प्रभु वसावा जी से मिलने के लिए ऑनलाइन अपॉइंटमेंट बुक किया था। प्रक्रिया आसान और तेज़ थी। मिलने पर उन्होंने मेरी समस्या ध्यान से सुनी और तुरंत समाधान का आश्वासन दिया।",
   },
   {
-    name: "James",
-    role: "Developer",
-    image: assets.about_us_image,
+    name: "सोनिया पटेल",
+    role: "शिक्षिका",
+    image: assets.random_people1,
     rating: 4,
-    title: "Great team and support",
-    text: "Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat dui diam lacus arcu.",
+    title: "सुविधाजनक और समय पर सेवा",
+    text: "अपॉइंटमेंट सिस्टम के जरिए MLA साहब से समय पर मुलाकात हुई। स्टाफ भी बहुत सहयोगी था और किसी तरह की परेशानी नहीं हुई।",
+  },
+  {
+    name: "अमित वर्मा",
+    role: "व्यापारी",
+    image: assets.random_people2,
+    rating: 5,
+    title: "जनता की चिंता करने वाले नेता",
+    text: "मैं अपनी खेती से जुड़ी समस्या लेकर गया था। प्रभु वसावा जी ने तुरंत अधिकारियों से बात करके मदद करने का भरोसा दिया। उनका व्यवहार बहुत ही विनम्र है।",
   },
 ];
 
@@ -75,9 +75,9 @@ export default function Testimonials() {
 
   return (
     <section className="py-10 px-4 ">
-      <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-10">
-        What Our Clients Say About Us
-      </h2>
+      <h1 className="text-4xl text-center mb-10 md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
+        Reviews from People Who Met Prabhu Vasava
+      </h1>
 
       <div className="relative max-w-4xl mx-auto overflow-hidden">
         {/* Slides */}
@@ -89,15 +89,17 @@ export default function Testimonials() {
         >
           {testimonials.map((t, idx) => (
             <div key={idx} className="w-full flex-shrink-0 px-4">
-              <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl mx-autobg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center border border-orange-100 transform hover:scale-105 transition duration-300">
+              <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center border border-orange-100 transform hover:scale-105 transition duration-300">
                 <div className="flex items-center justify-center mb-4">
-                  <Image
-                    src={t.image}
-                    alt={t.name}
-                    width={60}
-                    height={60}
-                    className="rounded-full"
-                  />
+                  <div className="w-24 h-24 rounded-full overflow-hidden">
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold text-gray-800">{t.name}</h3>
                 <p className="text-sm text-gray-500">{t.role}</p>
