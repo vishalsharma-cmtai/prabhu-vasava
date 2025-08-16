@@ -73,7 +73,7 @@ const SchemeTabs = () => {
       : schemes.filter((scheme) => scheme.type === activeTab.toLowerCase());
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div className="max-w-7xl mx-auto px-4 py-10">
       {/* Tabs */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
         {tabs.map((tab) => (
@@ -135,7 +135,7 @@ export const SchemePreview = () => {
   const topThree = schemes.slice(0, 3);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div className="max-w-7xl mx-auto px-4 py-10">
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent text-center mb-8">
         Featured Government Schemes

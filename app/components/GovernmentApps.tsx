@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 import { assets } from "@/assets/assets";
 import { Download } from "lucide-react";
 
@@ -34,10 +35,37 @@ const apps = [
   },
 ];
 
+// Animation variants
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }, // Fixed easing for TS
+  },
+};
+
 export default function GovernmentApps() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start px-4 pt-12 pb-10 text-gray-900">
-      <header className="text-center mb-12">
+    <main className="flex flex-col items-center justify-start px-4 pt-12 pb-10 text-gray-900">
+      {/* Header Animation */}
+      <motion.header
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+        viewport={{ once: true, amount: 0.3 }} // Trigger once, when 30% in view
+      >
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
           Government Apps
         </h1>
@@ -45,15 +73,21 @@ export default function GovernmentApps() {
           Explore official Indian government applications for services,
           information, and digital transactions.
         </p>
-      </header>
+      </motion.header>
 
-      <section
+      {/* Cards Animation */}
+      <motion.section
         aria-label="Government App Links"
         className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-5xl"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }} // Trigger once, when 20% in view
       >
         {apps.map(({ label, src, link, description }) => {
           const card = (
-            <div
+            <motion.div
+              variants={cardVariants}
               className="group relative bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-3xl shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 p-6 flex flex-col items-center text-center border border-orange-200 overflow-hidden"
               aria-hidden={false}
             >
@@ -75,7 +109,7 @@ export default function GovernmentApps() {
               >
                 <Download size={18} /> Download
               </span>
-            </div>
+            </motion.div>
           );
 
           if (link.startsWith("http")) {
@@ -104,7 +138,7 @@ export default function GovernmentApps() {
             );
           }
         })}
-      </section>
+      </motion.section>
     </main>
   );
 }

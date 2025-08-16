@@ -113,11 +113,16 @@ const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto border-t border-white/20 flex flex-col sm:flex-row justify-between items-center text-sm py-4 px-4 text-white gap-2 sm:gap-10">
-        <span>
-          © {new Date().getFullYear()} Prabhu Vasava. All rights reserved.
-        </span>
-        <span>Content protected. Unauthorized use prohibited.</span>
-      </div>
+  <span>
+    © {new Date().getFullYear()} Prabhu Vasava. All rights reserved | Designed by CMT AI
+  </span>
+  
+  <div className="flex gap-6">
+    <Link href="/privacy">Privacy Policy</Link>
+    <Link href="/copyright">Copyright Actions</Link>
+  </div>
+</div>
+
     </footer>
   );
 };

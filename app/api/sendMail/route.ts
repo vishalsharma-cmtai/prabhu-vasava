@@ -8,6 +8,7 @@ export async function POST(request: Request) {
       name,
       mobile,
       address,
+      appointmentDate,
       purpose,
       email,
       subject,
@@ -43,6 +44,7 @@ export async function POST(request: Request) {
         ${mobile ? `<p><strong>Mobile:</strong> ${mobile}</p>` : ""}
         ${email ? `<p><strong>Email:</strong> ${email}</p>` : ""}
         ${address ? `<p><strong>Address:</strong> ${address}</p>` : ""}
+        ${appointmentDate ? `<p><strong>Date of Appointment:</strong> ${appointmentDate}</p>` : ""}
         ${purpose ? `<p><strong>Purpose:</strong> ${purpose}</p>` : ""}
         ${subject ? `<p><strong>Subject:</strong> ${subject}</p>` : ""}
         ${message ? `<p><strong>Message:</strong> ${message}</p>` : ""}

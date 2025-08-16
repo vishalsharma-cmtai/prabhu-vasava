@@ -11,6 +11,7 @@ import swachh_bharat from "./schemeThumbnail/swachh-bharat.jpg";
 import hero_section from "./hero-section.png";
 import hero_section_home from "./hero-section-home.png";
 import hero_section_phone from "./hero-section-phone.png";
+import hero_section_sketch from "./hero-section-sketch.png";
 
 import bhim_app from "./governmentApps/bhim_app_logo.png";
 import umang from "./governmentApps/umang.png";
@@ -23,9 +24,10 @@ import youtube from "./governmentApps/Youtube.png";
 import flag from "./governmentApps/flag.jpg";
 import bgflag from "./governmentApps/bgflag.jpg";
 
-import random_people1 from "./random-people1.jpg"
-import random_people2 from "./random-people2.jpg"
-import random_people3 from "./random-people3.jpg"
+import random_people1 from "./random-people1.jpg";
+import random_people2 from "./random-people2.jpg";
+import random_people3 from "./random-people3.jpg";
+import random_people4 from "./random-people4.jpg";
 
 import press01 from "./pressNotes/press1.jpg";
 import press02 from "./pressNotes/press2.jpg";
@@ -218,10 +220,12 @@ export const assets = {
   hero_section,
   hero_section_home,
   hero_section_phone,
+  hero_section_sketch,
 
   random_people1,
   random_people2,
   random_people3,
+  random_people4,
 
   // Schemes
   jan_arogya,
